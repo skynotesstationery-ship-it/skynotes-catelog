@@ -1,0 +1,19 @@
+<section class="product-page">
+ <div class="search-bar">
+  <input 
+    type="text" 
+    placeholder="🔍 Search your cute stationery..." 
+    [(ngModel)]="search" 
+  />
+</div>
+
+  <div class="product-grid">
+    <app-product-card
+      *ngFor="let p of filtered()"
+      [product]="p"
+      (view)="openProduct($event)">
+    </app-product-card>
+  </div>
+
+  <app-product-popup *ngIf="selectedProduct" [product]="selectedProduct" (close)="closePopup()"></app-product-popup>
+</section>

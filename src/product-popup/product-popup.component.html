@@ -1,0 +1,27 @@
+<div class="overlay" (click)="onOverlay($event)">
+  <div class="modal">
+    <button class="close" (click)="close.emit()">✕</button>
+
+    <div class="gallery">
+      <button class="nav" (click)="prev()">‹</button>
+      <img [src]="product.images[currentIdx]" [alt]="product.name" />
+      <button class="nav" (click)="next()">›</button>
+    </div>
+
+    <div class="details">
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.desc }}</p>
+      <p class="price">₹ {{ product.price }}</p>
+
+      <div class="qty">
+        <button (click)="dec()">−</button>
+        <span>{{ qty || 0 }}</span>
+        <button (click)="inc()">+</button>
+      </div>
+
+      <div class="actions">
+        <button (click)="close.emit()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

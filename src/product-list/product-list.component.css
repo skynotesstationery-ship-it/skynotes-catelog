@@ -1,0 +1,73 @@
+.product-page { padding:1rem 0; }
+.search-row { margin-bottom:1rem; }
+.search-row input { width:100%; padding:8px 10px; border-radius:6px; border:1px solid #ccc; }
+.product-grid {
+  display: grid;
+  gap: 1.2rem;
+  justify-content: center;
+  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+/* For very small devices */
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-bar input {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+}
+
+/* For tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .search-bar input {
+    width: 80%;
+  }
+}
+
+/* For desktops */
+@media (min-width: 769px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  .search-bar input {
+    width: 60%;
+  }
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.search-bar input {
+  width: 60%;
+  max-width: 400px;
+  padding: 0.8rem 1.2rem;
+  border-radius: 30px;
+  border: 2px solid #ffe4f2;
+  background: linear-gradient(90deg, #ffdee9, #b5fffc);
+  font-size: 1rem;
+  font-family: 'Poppins', cursive;
+  outline: none;
+  box-shadow: 0 3px 8px rgba(255, 182, 193, 0.25);
+  transition: all 0.2s;
+  color: #444;
+}
+
+.search-bar input::placeholder {
+  color: #ff6f91;
+  font-weight: 500;
+}
+
+.search-bar input:focus {
+  border-color: #ff6f91;
+  box-shadow: 0 4px 12px rgba(255, 111, 145, 0.3);
+  background: #fff;
+}

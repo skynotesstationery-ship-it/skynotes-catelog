@@ -1,0 +1,121 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 220px;
+  height: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #ffdee9, #b5fffc);
+  border: 2px solid #ffe4f2;
+  box-shadow: 0 6px 12px rgba(255, 182, 193, 0.2);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(255, 111, 145, 0.25);
+}
+
+.thumb {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-bottom: 2px solid #ffe4f2;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.thumb:hover img {
+  transform: scale(1.08);
+}
+
+.info {
+  padding: 0.8rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ff6f91;
+  font-family: 'Poppins', cursive;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2a9d8f;
+  background: #e0fff9;
+  padding: 4px 12px;
+  border-radius: 12px;
+}
+
+.actions {
+  padding: 0.8rem 1rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.add-btn {
+  flex: 1;
+  background: #ff6f91;
+  color: #fff;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-btn:hover {
+  background: #e65c7d;
+}
+
+.qty-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff5f7;
+  border-radius: 30px;
+  padding: 6px 12px;
+  border: 2px solid #ff6f91;
+}
+
+.qty-box button {
+  background: #ff6f91;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.qty-box button:hover {
+  background: #e65c7d;
+}
+
+.qty-box span {
+  font-weight: 600;
+  font-size: 1rem;
+  min-width: 20px;
+  text-align: center;
+  color: #333;
+}

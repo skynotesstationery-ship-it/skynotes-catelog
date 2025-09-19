@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #ffdee9, #b5fffc);
+  border-bottom: 2px solid #ffe4f2;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff6f91;
+  font-family: 'Comic Sans MS', 'Poppins', cursive;
+  letter-spacing: 1px;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav button {
+  background: #fff;
+  border: 2px solid #ff6f91;
+  color: #ff6f91;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.nav button:hover {
+  background: #ff6f91;
+  color: #fff;
+}

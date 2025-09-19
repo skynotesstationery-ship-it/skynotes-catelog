@@ -1,0 +1,24 @@
+<article class="card">
+  <div class="thumb" (click)="open()">
+    <img [src]="product.images[0]" [alt]="product.name" />
+  </div>
+
+  <div class="info">
+    <h3 class="title">{{ product.name }}</h3>
+    <span class="price">₹ {{ product.price }}</span>
+  </div>
+
+  <!-- <div class="actions">
+    <ng-container *ngIf="qty === 0; else qtyBlock">
+      <button class="add-btn" (click)="addToCart()">Add to Cart</button>
+    </ng-container>
+
+    <ng-template #qtyBlock>
+      <div class="qty-box">
+        <button (click)="dec()">−</button>
+        <span>{{ qty }}</span>
+        <button (click)="inc()">+</button>
+      </div>
+    </ng-template>
+  </div> -->
+</article>

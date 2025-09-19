@@ -1,0 +1,37 @@
+<div class="cart-page">
+  <button class="back" (click)="backEvent.emit()">← Back to shop</button>
+
+  <h2>Your cart</h2>
+
+  <div *ngIf="cartItems.length === 0">Your cart is empty.</div>
+
+  <div *ngFor="let it of cartItems" class="cart-item">
+    <img [src]="it.product.images[0]" alt="" />
+    <div class="meta">
+      <div class="title">{{ it.product.name }}</div>
+      <div class="price">₹ {{ it.product.price }} each</div>
+    </div>
+    <div class="controls">
+      <button (click)="minus(it.product.id)">−</button>
+      <span>{{ it.qty }}</span>
+      <button (click)="plus(it.product.id)">+</button>
+      <button class="rm" (click)="remove(it.product.id)">Remove</button>
+    </div>
+  </div>
+
+  <div class="summary" *ngIf="cartItems.length > 0">
+    <div>Total: ₹ {{ cart.totalPrice() }}</div>
+
+    <label>
+      Mobile
+      <input [(ngModel)]="mobile" placeholder="Enter mobile number" />
+    </label>
+
+    <label>
+      Address
+      <textarea [(ngModel)]="address" rows="3" placeholder="Delivery address"></textarea>
+    </label>
+
+    <button [disabled]="!canOrder()" (click)="order()">Order</button>
+  </div>
+</div>

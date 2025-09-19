@@ -1,0 +1,31 @@
+.footer {
+  background: linear-gradient(90deg, #b5fffc, #ffdee9);
+  padding: 1.5rem;
+  border-top: 2px solid #ffe4f2;
+  text-align: center;
+  color: #333;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.footer .brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #ff6f91;
+}
+
+.footer a {
+  color: #ff6f91;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
